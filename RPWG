@@ -1,0 +1,25 @@
+import random
+
+class Random_Pw_G:
+    char = ""
+    num = int()
+    len = int()
+    def set(self):
+        self.char = Random_Pw_G.char
+        self.num = Random_Pw_G.num
+        self.len = Random_Pw_G.len
+    def get(self):
+        self.char = "abcdefghjklmnoprstABCDEFGHJKLM<ASHDUIL1208786563!@$%%^"
+        self.num = int(input("no.s of Pw u want :"))
+        self.len = int(input(":len of passwrd u want"))
+        print("Your passwords")
+    def makingrandom(self):
+        for N in range(self.num):
+            passwrds = ""
+            for L in range(self.len):
+                passwrds+=random.choice(self.char)
+            print(passwrds)
+pwg1 = Random_Pw_G()
+pwg1.set()
+pwg1.get()
+pwg1.makingrandom()
